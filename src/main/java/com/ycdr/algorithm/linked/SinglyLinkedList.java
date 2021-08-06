@@ -1,6 +1,6 @@
 package com.ycdr.algorithm.linked;
 
-import com.ycdr.algorithm.linked.algo.ListNode;
+import com.ycdr.algorithm.list.ArrayList;
 
 import java.util.Objects;
 
@@ -28,6 +28,23 @@ public class SinglyLinkedList<T> {
         }
         newNode.next = head;
         head = newNode;
+    }
+
+    public T deleteHead() {
+        if (head == null) {
+            return null;
+        }
+        Node<T> tmp = head.next;
+        T t = head.data;
+        head = tmp;
+        return t;
+    }
+
+    public T findHead() {
+        if (head == null) {
+            return null;
+        }
+        return head.data;
     }
 
     /**
@@ -265,5 +282,9 @@ public class SinglyLinkedList<T> {
 
         SinglyLinkedList.Node node = linkedList.mergeTwoLists(linkedList.findByIndex(0), linkedList2.findByIndex(0));
         System.out.println(node);
+
+        ArrayList list=new ArrayList();
+        list.add("");
+
     }
 }
