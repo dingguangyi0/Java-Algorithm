@@ -1,27 +1,18 @@
 package com.ycdr.algorithm.sort;
 
-import java.util.Arrays;
-
 /**
  * 冒泡排序
+ * @param <T>
  */
-public class BubbleSort<T extends Comparable> {
-    public void bubbleSort(T[] t) {
+public class BubbleSort<T extends Comparable<T>> implements Sort<T>{
+    @Override
+    public void sort(T[] t) {
         for (int i = 0; i < t.length; i++) {
-            for (int j = 0; j < t.length-1; j++) {
-                if (CommonUtil.compareTo(t[j],t[j+1])<0) {
-                    T tmp=t[j];
-                    t[j]=t[j+1];
-                    t[j+1]=tmp;
+            for (int j = 1; j < t.length-i; j++) {
+                if (less(t[j-1],t[j])){
+                    exch(t,j-1,j);
                 }
             }
         }
-    }
-
-    public static void main(String[] args) {
-        BubbleSort<Integer> bubbleSort=new BubbleSort<>();
-        Integer[] i=new Integer[]{4,5,6,3,1,2};
-        bubbleSort.bubbleSort(i);
-        System.out.println(Arrays.toString(i));
     }
 }
