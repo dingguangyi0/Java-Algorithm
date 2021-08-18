@@ -1,7 +1,5 @@
 package com.ycdr.algorithm.linked;
 
-import com.ycdr.algorithm.list.ArrayList;
-
 import java.util.Objects;
 
 /**
@@ -283,8 +281,7 @@ public class SinglyLinkedList<T> {
         SinglyLinkedList.Node node = linkedList.mergeTwoLists(linkedList.findByIndex(0), linkedList2.findByIndex(0));
         System.out.println(node);
 
-        ArrayList list=new ArrayList();
-        list.add("");
+
 
     }
 }
