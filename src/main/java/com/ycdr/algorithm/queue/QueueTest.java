@@ -45,5 +45,19 @@ public class QueueTest {
         dynamicQueue.enqueue("7");
         dynamicQueue.enqueue("8");
         dynamicQueue.traversal();
+        Queue<String> linkedQuerry = new LinkedQueue<>();
+        linkedQuerry.enqueue("1");
+        linkedQuerry.enqueue("2");
+        linkedQuerry.enqueue("3");
+        linkedQuerry.enqueue("4");
+        linkedQuerry.enqueue("5");
+        linkedQuerry.traversal();
+        System.out.println(linkedQuerry.dequeue());
+        System.out.println(linkedQuerry.dequeue());
+        System.out.println(linkedQuerry.dequeue());
+        linkedQuerry.enqueue("6");
+        linkedQuerry.enqueue("7");
+        linkedQuerry.enqueue("8");
+        linkedQuerry.traversal();
     }
 }
